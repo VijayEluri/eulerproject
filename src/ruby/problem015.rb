@@ -1,4 +1,3 @@
-
 class Resolver
 	def initialize(n)
 		@n = n
@@ -42,7 +41,7 @@ class Resolver
 
 	# Resolve by building a pyramid of all the number of routes possible. 
 	#
-   # The pyramid looks like:
+        # The pyramid looks like:
 	# (0)       1
 	# (1)      1,1
 	# (2)     1,2,1
@@ -59,19 +58,19 @@ class Resolver
 	# on the cube represents the number of routes possible to reach it starting either
 	# from the top left or the bottom right corner of it. 
 	# 1--1--1
-   # |  |  |
-   # 1--2--1
-   # |  |  |
-   # 1--1--1
+        # |  |  |
+        # 1--2--1
+        # |  |  |
+        # 1--1--1
 	#
 	# For the 3x3 cube:
 	# 01--01--01--01
-   # |   |    |   |
-   # 01--02--03--01
-   # |   |    |   |
-   # 01--03--02--01
-   # |   |    |   |
-   # 01--01--01--01 
+        # |   |    |   |
+        # 01--02--03--01
+        # |   |    |   |
+        # 01--03--02--01
+        # |   |    |   |
+       # 01--01--01--01 
 	#
 	def resolve
 		return 1 if @n == 0
