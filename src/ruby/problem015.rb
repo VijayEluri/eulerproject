@@ -4,13 +4,15 @@ class Resolver
 		@routes = 0
 	end
 	
-	def resolve_recurse()
+	# TEST recursive
+   def resolve_recurse()
 		x = 0
 		y = 0
 		recurse([[x,y]])
 		@routes
 	end
 	
+	# TEST iterative
 	def recurse(route)
 		if route.size < @n + @n + 1
 			x,y = route.last
