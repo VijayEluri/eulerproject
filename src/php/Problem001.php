@@ -11,6 +11,5 @@
 	}
 
 	$res = problem001(1000);
-
 	echo "$res\n";
 ?>
