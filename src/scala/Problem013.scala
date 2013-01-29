@@ -1,19 +1,21 @@
 import scala.io.Source
 
-object Problem013 extends Application {
+object Problem013 {
   
-  val src = Source.fromFile("Problem013.txt")
+	def main(args: Array[String]) {
+
+		val src = Source.fromFile("Problem013.txt")
   
-  /*
-  var sum = BigInt(0)
-  for (line <- src.getLines) { 
-    val n = BigInt(line.replaceAll("\\s",""))
-    sum = sum + n
-  }
-  println(sum.toString.substring(0,10))
-  */
+		/*
+		var sum = BigInt(0)
+		for (line <- src.getLines) { 
+			val n = BigInt(line.replaceAll("\\s",""))
+			sum = sum + n
+		}
+		println(sum.toString.substring(0,10))
+		*/
   
-  val sum = src.getLines.foldLeft(BigInt(0)) { (n, line) =>  n + BigInt(line.replaceAll("\\s","")) }
-  println(sum.toString.substring(0,10))
- 
+		val sum = src.getLines.foldLeft(BigInt(0)) { (n, line) =>  n + BigInt(line.replaceAll("\\s","")) }
+		println(sum.toString.substring(0,10))
+	}
 }

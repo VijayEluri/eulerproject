@@ -1,4 +1,4 @@
-object Problem014 extends Application {
+object Problem014 {
   
   def collatz(n:Int):List[Int] = {
     def inner(n:Int,l:List[Int]):List[Int] = {
@@ -10,7 +10,7 @@ object Problem014 extends Application {
         } else {
           k = 3*n+1
         }
-        inner(k,l+k)
+        inner(k,k::l)
       }
     }
     val l = List(n)
@@ -30,14 +30,17 @@ object Problem014 extends Application {
     }
     i
   }
-                                              
-  val start = System.currentTimeMillis()
+                  
+	def main(args: Array[String]) {
+                            
+		val start = System.currentTimeMillis()
   
-  val max = (1 to 999999).foldLeft((0,0)) {(max,i) =>
-    val l = collatz2(i)
-    if (l > max._1) (l,i) else max
-  }
+		val max = (1 to 999999).foldLeft((0,0)) {(max,i) =>
+			val l = collatz2(i)
+			if (l > max._1) (l,i) else max
+		}
   
-  println("n = " + max._2 + " (" + max._1 + ")")
-  println((System.currentTimeMillis() - start) + " ms")
+		println("n = " + max._2 + " (" + max._1 + ")")
+		println((System.currentTimeMillis() - start) + " ms")
+	}
 }
