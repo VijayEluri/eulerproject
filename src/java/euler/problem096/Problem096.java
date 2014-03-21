@@ -9,7 +9,7 @@ public class Problem096 {
 	
 	static public int resolve() {
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("res/sudoku.txt"));
+			BufferedReader reader = new BufferedReader(new FileReader("src/res/sudoku.txt"));
 			String line = null;
 			int sum = 0;
 			int[] grid = new int[Sudoku.GRID_SIZE];

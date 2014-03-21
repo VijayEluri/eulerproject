@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils;
 public class Problem059 {
 	
 	static public byte[] loadCryptedText() throws IOException {
-		File file = new File("res/cipher1.txt");
+		File file = new File("src/res/cipher1.txt");
 		String text = FileUtils.readFileToString(file, "UTF-8");
 		text = StringUtils.trim(text);
 		String[] characters = StringUtils.split(text, ',');
